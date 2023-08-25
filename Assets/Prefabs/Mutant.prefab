@@ -492,8 +492,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4016630641990634199}
   - component: {fileID: 5804101864169695684}
-  - component: {fileID: 7881399622782371090}
   - component: {fileID: 460482021133765724}
+  - component: {fileID: 7881399622782371090}
   - component: {fileID: 7108957472283943627}
   m_Layer: 0
   m_Name: Mutant
@@ -532,27 +532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!95 &7881399622782371090
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4394311992372028043}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6593a482e1afc48e089e1e3cba27aaf0, type: 3}
-  m_Controller: {fileID: 9100000, guid: 887ad9a8366674fe2829f8d778b17197, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!195 &460482021133765724
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -575,6 +554,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &7881399622782371090
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394311992372028043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6593a482e1afc48e089e1e3cba27aaf0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 887ad9a8366674fe2829f8d778b17197, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &7108957472283943627
 CapsuleCollider:
   m_ObjectHideFlags: 0
