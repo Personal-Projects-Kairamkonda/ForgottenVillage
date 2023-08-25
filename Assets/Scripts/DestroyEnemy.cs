@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
+    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
@@ -12,4 +13,5 @@ public class DestroyEnemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 }
