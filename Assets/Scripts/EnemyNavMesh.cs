@@ -16,19 +16,30 @@ public class EnemyNavMesh : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.speed /= 2.5f;
 
+        /*
+        getAnimator.applyRootMotion = true;
+        navMeshAgent.updatePosition = false;
+        navMeshAgent.updateRotation = true;
+        */
+    }
+
+    private void OnAnimatorMove()
+    {
+        Vector3 rootPosition = getAnimator.rootPosition;
+        rootPosition.y = navMeshAgent.nextPosition.y;
+        transform.position = rootPosition;
+        transform.rotation = getAnimator.rootRotation;
+        navMeshAgent.nextPosition = rootPosition;
     }
 
     void Update()
     {
         MoveAgent();
-        
     }
 
     void MoveAgent()
     {
         navMeshAgent.destination = target.position;
-
-        
     }
 
     void PlayIdleAnimation()
