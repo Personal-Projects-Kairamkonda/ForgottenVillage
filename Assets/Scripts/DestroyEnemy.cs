@@ -9,13 +9,13 @@ public class DestroyEnemy : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject, 1f);
+            Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
 
         if(collision.gameObject.CompareTag("Ground"))
         {
-            Destroy(this.gameObject, 10f);
+            Destroy(this.gameObject, 1f);
         }
     }
     
