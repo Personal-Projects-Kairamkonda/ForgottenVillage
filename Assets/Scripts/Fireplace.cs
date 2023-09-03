@@ -8,14 +8,37 @@ public class Fireplace : MonoBehaviour
     private Vector3 spawnPosition;
     private GameObject fireHolder;
 
+    private List<GameObject> tempPrefab;
+
     private void Awake()
     {
+        tempPrefab = new List<GameObject>();
         spawnPosition = transform.position + Vector3.up * 2;
     }
 
-    private void Update()
+    private void Start()
     {
-        SpawnPrefab();
+        GameObject temp = Instantiate(firePrefab, spawnPosition, transform.rotation);
+        tempPrefab.Add(temp);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(tempPrefab==null)
+        {
+            GameObject temp = Instantiate(firePrefab, spawnPosition, transform.rotation);
+            tempPrefab.Add(temp);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        tempPrefab.Clear();
+
+        GameObject temp = Instantiate(firePrefab, spawnPosition, transform.rotation);
+        tempPrefab.Add(temp);
+
+        Debug.Log(other.gameObject.name);
     }
 
     public void SpawnPrefab()

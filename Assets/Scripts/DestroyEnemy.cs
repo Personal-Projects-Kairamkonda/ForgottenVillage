@@ -12,6 +12,11 @@ public class DestroyEnemy : MonoBehaviour
             Destroy(collision.gameObject, 1f);
             Destroy(this.gameObject);
         }
+
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(this.gameObject, 10f);
+        }
     }
     
 }

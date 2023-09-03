@@ -23,6 +23,7 @@ public class EnemyNavMesh : MonoBehaviour
         */
     }
 
+    /*
     private void OnAnimatorMove()
     {
         Vector3 rootPosition = getAnimator.rootPosition;
@@ -31,6 +32,7 @@ public class EnemyNavMesh : MonoBehaviour
         transform.rotation = getAnimator.rootRotation;
         navMeshAgent.nextPosition = rootPosition;
     }
+    */
 
     void Update()
     {
